@@ -1,4 +1,10 @@
 # Jpin
+
+# My Project
+
+This is an example of a class diagram using Mermaid in GitHub.
+
+```mermaid
 classDiagram
     class Main {
         +main(String[] args)
@@ -20,5 +26,4 @@ classDiagram
 
     Main --> Order
     Order --> Delivery
-
 
