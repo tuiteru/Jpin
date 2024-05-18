@@ -1,6 +1,6 @@
 # Jpin
 
-# My Project
+# monitoring system
 
 This is an example of a class diagram using Mermaid in GitHub.
 
