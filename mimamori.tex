@@ -1,0 +1,60 @@
+% Created 2024-06-13 Thu 20:41
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{listings}
+\lstset{basicstyle=\ttfamily\color{white},backgroundcolor=\color{black},frame=single,rulecolor=\color{white},framerule=0.5pt}
+\author{Your Name}
+\date{2024-06-13}
+\title{Sample Document}
+\hypersetup{
+ pdfauthor={Your Name},
+ pdftitle={Sample Document},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 29.1 (Org mode 9.6.6)},
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+
+\section{プログラムの概要}
+\label{sec:org6e78cf8}
+このプログラムは、センサーからの通知を受け取り、コマンドライン上で一覧表示するためのシンプルなプログラムです。
+
+\section{使用方法}
+\label{sec:org764c90e}
+コンソール画面からMainクラスを実行します。
+
+\section{センサーの変数定義}
+\label{sec:orgb50deef}
+以下の変数を定義することで、各センサーの値を管理します。
+これにより、各センサーがどこに設置されているかを識別できるようになります。
+
+\begin{verbatim}
+// 各センサーの識別ID。複数箇所のセンサーを識別。
+private int id;
+
+// センサー設置場所。場所を特定。
+private String location;
+
+// センサーが占有中かどうか。
+private boolean isOccupied;
+
+// センサーの通知の保存リスト。
+private NotificationList notificationList;
+\end{verbatim}
+\end{document}
