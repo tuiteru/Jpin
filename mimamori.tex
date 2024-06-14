@@ -1,6 +1,7 @@
-% Created 2024-06-13 Thu 20:41
+% Created 2024-06-13 Thu 23:36
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
+\usepackage[ipa]{luatexja-preset}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{graphicx}
@@ -12,9 +13,15 @@
 \usepackage{amssymb}
 \usepackage{capt-of}
 \usepackage{hyperref}
-\usepackage{xcolor}
 \usepackage{listings}
-\lstset{basicstyle=\ttfamily\color{white},backgroundcolor=\color{black},frame=single,rulecolor=\color{white},framerule=0.5pt}
+\usepackage{xcolor}
+\lstset{
+basicstyle=\ttfamily\color{white},
+backgroundcolor=\color{black},
+frame=single,
+rulecolor=\color{white},
+framerule=0.5pt
+}
 \author{Your Name}
 \date{2024-06-13}
 \title{Sample Document}
@@ -28,23 +35,21 @@
 \begin{document}
 
 \maketitle
-\tableofcontents
-
 
 \section{プログラムの概要}
-\label{sec:org6e78cf8}
+\label{sec:org3f72727}
 このプログラムは、センサーからの通知を受け取り、コマンドライン上で一覧表示するためのシンプルなプログラムです。
 
 \section{使用方法}
-\label{sec:org764c90e}
+\label{sec:org97390fa}
 コンソール画面からMainクラスを実行します。
 
 \section{センサーの変数定義}
-\label{sec:orgb50deef}
+\label{sec:org344f41c}
 以下の変数を定義することで、各センサーの値を管理します。
 これにより、各センサーがどこに設置されているかを識別できるようになります。
 
-\begin{verbatim}
+\begin{lstlisting}
 // 各センサーの識別ID。複数箇所のセンサーを識別。
 private int id;
 
@@ -56,5 +61,6 @@ private boolean isOccupied;
 
 // センサーの通知の保存リスト。
 private NotificationList notificationList;
-\end{verbatim}
+\end{lstlisting}
 \end{document}
+
