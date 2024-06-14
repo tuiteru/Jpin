@@ -64,3 +64,88 @@ private NotificationList notificationList;
 \end{lstlisting}
 \end{document}
 
+% Created 2024-06-13 Thu 23:36
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[ipa]{luatexja-preset}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{xcolor}
+\lstset{
+basicstyle=\ttfamily\color{white},
+backgroundcolor=\color{black},
+frame=single,
+rulecolor=\color{white},
+framerule=0.5pt
+}
+\author{Your Name}
+\date{2024-06-13}
+\title{Sample Document}
+\hypersetup{
+ pdfauthor={Your Name},
+ pdftitle={Sample Document},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 29.1 (Org mode 9.6.6)},
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+
+\section{プログラムの概要}
+\label{sec:org3f72727}
+このプログラムは、センサーからの通知を受け取り、コマンドライン上で一覧表示するためのシンプルなプログラムです。
+
+\section{使用方法}
+\label{sec:org97390fa}
+コンソール画面からMainクラスを実行します。
+
+\section{センサーの変数定義}
+\label{sec:org344f41c}
+以下の変数を定義することで、各センサーの値を管理します。
+これにより、各センサーがどこに設置されているかを識別できるようになります。
+
+\begin{lstlisting}
+// 各センサーの識別ID。複数箇所のセンサーを識別。
+private int id;
+
+// センサー設置場所。場所を特定。
+private String location;
+
+// センサーが占有中かどうか。
+private boolean isOccupied;
+
+// センサーの通知の保存リスト。
+private NotificationList notificationList;
+\end{lstlisting}
+
+%%クラス図あたり
+\section{Mermaidの図}
+以下にセンサーシステムのクラス図を示します。
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{diagram.png}
+    \caption{センサーシステムのクラス図}
+    \label{fig:class_diagram}
+\end{figure}
+
+
+
+
+\end{document}
+
+
+
+
+
