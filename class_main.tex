@@ -1,0 +1,81 @@
+\doxysection{Main クラス}
+\hypertarget{class_main}{}\label{class_main}\index{Main@{Main}}
+
+
+メインクラス。このクラスはプログラムのエントリーポイントを提供し、 センサーの状態変更と通知の表示を行う。  
+
+
+
+
+Main 連携図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=194pt]{class_main__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{静的公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_main_a8a5d0f827edddff706cc0e6740d0579a}{main}} (String\mbox{[}$\,$\mbox{]} args)
+\begin{DoxyCompactList}\small\item\em プログラムのエントリーポイント。 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+メインクラス。このクラスはプログラムのエントリーポイントを提供し、 センサーの状態変更と通知の表示を行う。 
+
+ \mbox{\hyperlink{main_8java_source}{main.\+java}} の \mbox{\hyperlink{main_8java_source_l00135}{135}} 行目に定義があります。
+
+
+
+\doxysubsection{関数詳解}
+\Hypertarget{class_main_a8a5d0f827edddff706cc0e6740d0579a}\index{Main@{Main}!main@{main}}
+\index{main@{main}!Main@{Main}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{class_main_a8a5d0f827edddff706cc0e6740d0579a} 
+static void Main.\+main (\begin{DoxyParamCaption}\item[{String\mbox{[}$\,$\mbox{]}}]{args}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+プログラムのエントリーポイント。 
+
+
+\begin{DoxyParams}{引数}
+{\em args} & コマンドライン引数 \\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{main_8java_source}{main.\+java}} の \mbox{\hyperlink{main_8java_source_l00142}{142}} 行目に定義があります。
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_notification_list}{NotificationList}}\ notificationList\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_notification_list}{NotificationList}}();}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_sensor}{Sensor}}\ sensor\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_sensor}{Sensor}}(1,\ \textcolor{stringliteral}{"{}Bathroom"{}},\ notificationList);}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ sensor.\mbox{\hyperlink{class_sensor_a182b59d4fd30533954906773629e332a}{setOccupied}}(\textcolor{keyword}{true});}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ sensor.\mbox{\hyperlink{class_sensor_a182b59d4fd30533954906773629e332a}{setOccupied}}(\textcolor{keyword}{false});}
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{class_notification}{Notification}}\ notification\ :\ notificationList.getNotifications())\ \{}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(notification.getTimestamp()\ +\ \textcolor{stringliteral}{"{}\ -\/\ "{}}\ +\ notification.getMessage());}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00152\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+参照先 \mbox{\hyperlink{main_8java_source_l00124}{Notification\+List.\+get\+Notifications()}}, \mbox{\hyperlink{main_8java_source_l00040}{Sensor.\+set\+Occupied()}}.
+
+呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_a8a5d0f827edddff706cc0e6740d0579a_cgraph}
+\end{center}
+\end{figure}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Kmax/\mbox{\hyperlink{main_8java}{main.\+java}}\end{DoxyCompactItemize}

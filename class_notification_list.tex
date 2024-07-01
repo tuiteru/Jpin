@@ -1,0 +1,166 @@
+\doxysection{Notification\+List クラス}
+\hypertarget{class_notification_list}{}\label{class_notification_list}\index{NotificationList@{NotificationList}}
+
+
+通知リストを管理するクラス。このクラスは通知のリストを持ち、 通知の追加やリストの取得を行う。  
+
+
+
+
+Notification\+List 連携図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=201pt]{class_notification_list__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_notification_list_ab0b67c98536fa08df77cb0c2afceaac8}{Notification\+List}} ()
+\begin{DoxyCompactList}\small\item\em 通知リストのコンストラクタ。 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_notification_list_ae0f5f9b1d693afbf66b282d18c087c12}{add\+Notification}} (\mbox{\hyperlink{class_notification}{Notification}} notification)
+\begin{DoxyCompactList}\small\item\em 通知をリストに追加する。 \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{class_notification}{Notification}} $>$ \mbox{\hyperlink{class_notification_list_a29901e4edb2a6bdcdd362f38cfbce085}{get\+Notifications}} ()
+\begin{DoxyCompactList}\small\item\em 通知リストを取得する。 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \mbox{\hyperlink{class_notification}{Notification}} $>$ \mbox{\hyperlink{class_notification_list_a83dc2058f9ded233f96b718993518d15}{notifications}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+通知リストを管理するクラス。このクラスは通知のリストを持ち、 通知の追加やリストの取得を行う。 
+
+ \mbox{\hyperlink{main_8java_source}{main.\+java}} の \mbox{\hyperlink{main_8java_source_l00100}{100}} 行目に定義があります。
+
+
+
+\doxysubsection{構築子と解体子}
+\Hypertarget{class_notification_list_ab0b67c98536fa08df77cb0c2afceaac8}\index{NotificationList@{NotificationList}!NotificationList@{NotificationList}}
+\index{NotificationList@{NotificationList}!NotificationList@{NotificationList}}
+\doxysubsubsection{\texorpdfstring{NotificationList()}{NotificationList()}}
+{\footnotesize\ttfamily \label{class_notification_list_ab0b67c98536fa08df77cb0c2afceaac8} 
+Notification\+List.\+Notification\+List (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+通知リストのコンストラクタ。 
+
+
+
+ \mbox{\hyperlink{main_8java_source}{main.\+java}} の \mbox{\hyperlink{main_8java_source_l00106}{106}} 行目に定義があります。
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ this.notifications\ =\ \textcolor{keyword}{new}\ ArrayList<>();}
+\DoxyCodeLine{00108\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{関数詳解}
+\Hypertarget{class_notification_list_ae0f5f9b1d693afbf66b282d18c087c12}\index{NotificationList@{NotificationList}!addNotification@{addNotification}}
+\index{addNotification@{addNotification}!NotificationList@{NotificationList}}
+\doxysubsubsection{\texorpdfstring{addNotification()}{addNotification()}}
+{\footnotesize\ttfamily \label{class_notification_list_ae0f5f9b1d693afbf66b282d18c087c12} 
+void Notification\+List.\+add\+Notification (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_notification}{Notification}}}]{notification}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+通知をリストに追加する。 
+
+
+\begin{DoxyParams}{引数}
+{\em notification} & 追加する通知 \\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{main_8java_source}{main.\+java}} の \mbox{\hyperlink{main_8java_source_l00115}{115}} 行目に定義があります。
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_notification_list_a83dc2058f9ded233f96b718993518d15}{notifications}}.add(notification);}
+\DoxyCodeLine{00117\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+参照先 \mbox{\hyperlink{main_8java_source_l00101}{notifications}}.
+
+
+
+参照元 \mbox{\hyperlink{main_8java_source_l00048}{Sensor.\+notify\+Status()}}.
+
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_notification_list_ae0f5f9b1d693afbf66b282d18c087c12_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_notification_list_a29901e4edb2a6bdcdd362f38cfbce085}\index{NotificationList@{NotificationList}!getNotifications@{getNotifications}}
+\index{getNotifications@{getNotifications}!NotificationList@{NotificationList}}
+\doxysubsubsection{\texorpdfstring{getNotifications()}{getNotifications()}}
+{\footnotesize\ttfamily \label{class_notification_list_a29901e4edb2a6bdcdd362f38cfbce085} 
+List$<$ \mbox{\hyperlink{class_notification}{Notification}} $>$ Notification\+List.\+get\+Notifications (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+通知リストを取得する。 
+
+\begin{DoxyReturn}{戻り値}
+通知リスト 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{main_8java_source}{main.\+java}} の \mbox{\hyperlink{main_8java_source_l00124}{124}} 行目に定義があります。
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_notification_list_a83dc2058f9ded233f96b718993518d15}{notifications}};}
+\DoxyCodeLine{00126\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+参照先 \mbox{\hyperlink{main_8java_source_l00101}{notifications}}.
+
+
+
+参照元 \mbox{\hyperlink{main_8java_source_l00142}{Main.\+main()}}.
+
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{class_notification_list_a29901e4edb2a6bdcdd362f38cfbce085_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{メンバ詳解}
+\Hypertarget{class_notification_list_a83dc2058f9ded233f96b718993518d15}\index{NotificationList@{NotificationList}!notifications@{notifications}}
+\index{notifications@{notifications}!NotificationList@{NotificationList}}
+\doxysubsubsection{\texorpdfstring{notifications}{notifications}}
+{\footnotesize\ttfamily \label{class_notification_list_a83dc2058f9ded233f96b718993518d15} 
+List$<$\mbox{\hyperlink{class_notification}{Notification}}$>$ Notification\+List.\+notifications\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+ \mbox{\hyperlink{main_8java_source}{main.\+java}} の \mbox{\hyperlink{main_8java_source_l00101}{101}} 行目に定義があります。
+
+
+
+参照元 \mbox{\hyperlink{main_8java_source_l00115}{add\+Notification()}}, \mbox{\hyperlink{main_8java_source_l00124}{get\+Notifications()}}.
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Kmax/\mbox{\hyperlink{main_8java}{main.\+java}}\end{DoxyCompactItemize}

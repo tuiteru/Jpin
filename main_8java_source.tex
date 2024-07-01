@@ -1,0 +1,88 @@
+\doxysection{C\+:/\+Users/\+Kmax/main.java}
+\hypertarget{main_8java_source}{}\label{main_8java_source}\mbox{\hyperlink{main_8java}{\mbox{[}詳解\mbox{]}}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00008}00008\ \textcolor{keyword}{import}\ java.util.ArrayList;}
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00009}00009\ \textcolor{keyword}{import}\ java.util.Date;}
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00010}00010\ \textcolor{keyword}{import}\ java.util.List;}
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00016}\mbox{\hyperlink{class_sensor}{00016}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_sensor}{Sensor}}\ \{}
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00017}\mbox{\hyperlink{class_sensor_abf3b9a9233db2abd0a79937b3863d317}{00017}}\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_sensor_abf3b9a9233db2abd0a79937b3863d317}{id}};\ \textcolor{comment}{//\ 各センサーの識別ID。これで、複数箇所のセンサーを識別。}}
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00018}\mbox{\hyperlink{class_sensor_a9fc20bdf2c72759b47962794aad2ec09}{00018}}\ \ \ \ \ \textcolor{keyword}{private}\ String\ \mbox{\hyperlink{class_sensor_a9fc20bdf2c72759b47962794aad2ec09}{location}};\ \textcolor{comment}{//\ センサー設置場所。これで場所を特定。}}
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00019}\mbox{\hyperlink{class_sensor_a11af10fa5bc0a803cbbf1a2f50a253ec}{00019}}\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{boolean}\ \mbox{\hyperlink{class_sensor_a11af10fa5bc0a803cbbf1a2f50a253ec}{isOccupied}};\ \textcolor{comment}{//\ センサーが優先中かどうか。}}
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00020}\mbox{\hyperlink{class_sensor_af62610c1415f18639599a9ced59ad4e4}{00020}}\ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_notification_list}{NotificationList}}\ \mbox{\hyperlink{class_sensor_af62610c1415f18639599a9ced59ad4e4}{notificationList}};\ \textcolor{comment}{//\ センサーの通知を保存。}}
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00029}\mbox{\hyperlink{class_sensor_a3c47452b4bc8e66f242b2388f3852d4a}{00029}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_sensor_a3c47452b4bc8e66f242b2388f3852d4a}{Sensor}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id},\ String\ \mbox{\hyperlink{class_sensor_a9fc20bdf2c72759b47962794aad2ec09}{location}},\ \mbox{\hyperlink{class_notification_list}{NotificationList}}\ \mbox{\hyperlink{class_sensor_af62610c1415f18639599a9ced59ad4e4}{notificationList}})\ \{}
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00030}00030\ \ \ \ \ \ \ \ \ this.id\ =\ \mbox{\hyperlink{class_sensor_abf3b9a9233db2abd0a79937b3863d317}{id}};\ \textcolor{comment}{//\ センサー\ ID}}
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00031}00031\ \ \ \ \ \ \ \ \ this.location\ =\ \mbox{\hyperlink{class_sensor_a9fc20bdf2c72759b47962794aad2ec09}{location}};\ \textcolor{comment}{//\ センサーの場所。}}
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00032}00032\ \ \ \ \ \ \ \ \ this.notificationList\ =\ \mbox{\hyperlink{class_sensor_af62610c1415f18639599a9ced59ad4e4}{notificationList}};}
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00033}00033\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00040}\mbox{\hyperlink{class_sensor_a182b59d4fd30533954906773629e332a}{00040}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sensor_a182b59d4fd30533954906773629e332a}{setOccupied}}(\textcolor{keywordtype}{boolean}\ \mbox{\hyperlink{class_sensor_a11af10fa5bc0a803cbbf1a2f50a253ec}{isOccupied}})\ \{}
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00041}00041\ \ \ \ \ \ \ \ \ this.isOccupied\ =\ \mbox{\hyperlink{class_sensor_a11af10fa5bc0a803cbbf1a2f50a253ec}{isOccupied}};}
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00042}00042\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_sensor_a8b925da554696691149b744b8e96de44}{notifyStatus}}();}
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00043}00043\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00048}\mbox{\hyperlink{class_sensor_a8b925da554696691149b744b8e96de44}{00048}}\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sensor_a8b925da554696691149b744b8e96de44}{notifyStatus}}()\ \{}
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00049}00049\ \ \ \ \ \ \ \ \ String\ message\ =\ \mbox{\hyperlink{class_sensor_a11af10fa5bc0a803cbbf1a2f50a253ec}{isOccupied}}\ ?\ \textcolor{stringliteral}{"{}Occupied"{}}\ :\ \textcolor{stringliteral}{"{}Vacant"{}};}
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00050}00050\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_notification}{Notification}}\ notification\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_notification}{Notification}}(\textcolor{keyword}{new}\ Date(),\ message);}
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00051}00051\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_sensor_af62610c1415f18639599a9ced59ad4e4}{notificationList}}.\mbox{\hyperlink{class_notification_list_ae0f5f9b1d693afbf66b282d18c087c12}{addNotification}}(notification);}
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00052}00052\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00054}00054\ \ \ \ \ \textcolor{comment}{//\ その他のメソッドや機能はここに追加}}
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00055}00055\ \}}
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00060}\mbox{\hyperlink{class_notification}{00060}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_notification}{Notification}}\ \{}
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00061}\mbox{\hyperlink{class_notification_aa883f881ceb10abeb1c977d4caecdaac}{00061}}\ \ \ \ \ \textcolor{keyword}{private}\ Date\ \mbox{\hyperlink{class_notification_aa883f881ceb10abeb1c977d4caecdaac}{timestamp}};}
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00062}\mbox{\hyperlink{class_notification_a91cd117772af07f9779e4c6a7d5796a2}{00062}}\ \ \ \ \ \textcolor{keyword}{private}\ String\ \mbox{\hyperlink{class_notification_a91cd117772af07f9779e4c6a7d5796a2}{message}};}
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00063}00063\ }
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00070}\mbox{\hyperlink{class_notification_a4537261ea035c690addda9dd5a5e55a5}{00070}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_notification_a4537261ea035c690addda9dd5a5e55a5}{Notification}}(Date\ \mbox{\hyperlink{class_notification_aa883f881ceb10abeb1c977d4caecdaac}{timestamp}},\ String\ \mbox{\hyperlink{class_notification_a91cd117772af07f9779e4c6a7d5796a2}{message}})\ \{}
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00071}00071\ \ \ \ \ \ \ \ \ this.timestamp\ =\ \mbox{\hyperlink{class_notification_aa883f881ceb10abeb1c977d4caecdaac}{timestamp}};}
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00072}00072\ \ \ \ \ \ \ \ \ this.message\ =\ \mbox{\hyperlink{class_notification_a91cd117772af07f9779e4c6a7d5796a2}{message}};}
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00073}00073\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00080}\mbox{\hyperlink{class_notification_a5c93b42b1b246208197240631b161f53}{00080}}\ \ \ \ \ \textcolor{keyword}{public}\ Date\ \mbox{\hyperlink{class_notification_a5c93b42b1b246208197240631b161f53}{getTimestamp}}()\ \{}
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00081}00081\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_notification_aa883f881ceb10abeb1c977d4caecdaac}{timestamp}};}
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00082}00082\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00083}00083\ }
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00089}\mbox{\hyperlink{class_notification_a4b603fb02f598ad492a689c516ad2609}{00089}}\ \ \ \ \ \textcolor{keyword}{public}\ String\ \mbox{\hyperlink{class_notification_a4b603fb02f598ad492a689c516ad2609}{getMessage}}()\ \{}
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00090}00090\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_notification_a91cd117772af07f9779e4c6a7d5796a2}{message}};}
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00091}00091\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00092}00092\ }
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00093}00093\ \ \ \ \ \textcolor{comment}{//\ その他のメソッドや機能はここに追加}}
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00094}00094\ \}}
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00095}00095\ }
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00100}\mbox{\hyperlink{class_notification_list}{00100}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_notification_list}{NotificationList}}\ \{}
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00101}\mbox{\hyperlink{class_notification_list_a83dc2058f9ded233f96b718993518d15}{00101}}\ \ \ \ \ \textcolor{keyword}{private}\ List<Notification>\ \mbox{\hyperlink{class_notification_list_a83dc2058f9ded233f96b718993518d15}{notifications}};}
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00102}00102\ }
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00106}\mbox{\hyperlink{class_notification_list_ab0b67c98536fa08df77cb0c2afceaac8}{00106}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_notification_list_ab0b67c98536fa08df77cb0c2afceaac8}{NotificationList}}()\ \{}
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00107}00107\ \ \ \ \ \ \ \ \ this.notifications\ =\ \textcolor{keyword}{new}\ ArrayList<>();}
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00108}00108\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00109}00109\ }
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00115}\mbox{\hyperlink{class_notification_list_ae0f5f9b1d693afbf66b282d18c087c12}{00115}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_notification_list_ae0f5f9b1d693afbf66b282d18c087c12}{addNotification}}(\mbox{\hyperlink{class_notification}{Notification}}\ notification)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00116}00116\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_notification_list_a83dc2058f9ded233f96b718993518d15}{notifications}}.add(notification);}
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00117}00117\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00118}00118\ }
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00124}\mbox{\hyperlink{class_notification_list_a29901e4edb2a6bdcdd362f38cfbce085}{00124}}\ \ \ \ \ \textcolor{keyword}{public}\ List<Notification>\ \mbox{\hyperlink{class_notification_list_a29901e4edb2a6bdcdd362f38cfbce085}{getNotifications}}()\ \{}
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00125}00125\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_notification_list_a83dc2058f9ded233f96b718993518d15}{notifications}};}
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00126}00126\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00127}00127\ }
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00128}00128\ \ \ \ \ \textcolor{comment}{//\ その他のメソッドや機能はここに追加}}
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00129}00129\ \}}
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00130}00130\ }
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00135}\mbox{\hyperlink{class_main}{00135}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_main}{Main}}\ \{}
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00136}00136\ }
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00142}\mbox{\hyperlink{class_main_a8a5d0f827edddff706cc0e6740d0579a}{00142}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_a8a5d0f827edddff706cc0e6740d0579a}{main}}(String[]\ args)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00143}00143\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_notification_list}{NotificationList}}\ notificationList\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_notification_list}{NotificationList}}();}
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00144}00144\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_sensor}{Sensor}}\ sensor\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_sensor}{Sensor}}(1,\ \textcolor{stringliteral}{"{}Bathroom"{}},\ notificationList);}
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00145}00145\ }
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00146}00146\ \ \ \ \ \ \ \ \ sensor.\mbox{\hyperlink{class_sensor_a182b59d4fd30533954906773629e332a}{setOccupied}}(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00147}00147\ \ \ \ \ \ \ \ \ sensor.\mbox{\hyperlink{class_sensor_a182b59d4fd30533954906773629e332a}{setOccupied}}(\textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00148}00148\ }
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00149}00149\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{class_notification}{Notification}}\ notification\ :\ notificationList.\mbox{\hyperlink{class_notification_list_a29901e4edb2a6bdcdd362f38cfbce085}{getNotifications}}())\ \{}
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00150}00150\ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(notification.getTimestamp()\ +\ \textcolor{stringliteral}{"{}\ -\/\ "{}}\ +\ notification.getMessage());}
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00151}00151\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00152}00152\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8java_source_l00153}00153\ \}}
+
+\end{DoxyCode}

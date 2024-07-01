@@ -1,0 +1,170 @@
+\doxysection{Notification クラス}
+\hypertarget{class_notification}{}\label{class_notification}\index{Notification@{Notification}}
+
+
+通知を表すクラス。このクラスは通知のタイムスタンプとメッセージを持つ。  
+
+
+
+
+Notification 連携図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=224pt]{class_notification__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_notification_a4537261ea035c690addda9dd5a5e55a5}{Notification}} (Date \mbox{\hyperlink{class_notification_aa883f881ceb10abeb1c977d4caecdaac}{timestamp}}, String \mbox{\hyperlink{class_notification_a91cd117772af07f9779e4c6a7d5796a2}{message}})
+\begin{DoxyCompactList}\small\item\em 通知のコンストラクタ。 \end{DoxyCompactList}\item 
+Date \mbox{\hyperlink{class_notification_a5c93b42b1b246208197240631b161f53}{get\+Timestamp}} ()
+\begin{DoxyCompactList}\small\item\em 通知のタイムスタンプを取得する。 \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{class_notification_a4b603fb02f598ad492a689c516ad2609}{get\+Message}} ()
+\begin{DoxyCompactList}\small\item\em 通知のメッセージを取得する。 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+Date \mbox{\hyperlink{class_notification_aa883f881ceb10abeb1c977d4caecdaac}{timestamp}}
+\item 
+String \mbox{\hyperlink{class_notification_a91cd117772af07f9779e4c6a7d5796a2}{message}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+通知を表すクラス。このクラスは通知のタイムスタンプとメッセージを持つ。 
+
+ \mbox{\hyperlink{main_8java_source}{main.\+java}} の \mbox{\hyperlink{main_8java_source_l00060}{60}} 行目に定義があります。
+
+
+
+\doxysubsection{構築子と解体子}
+\Hypertarget{class_notification_a4537261ea035c690addda9dd5a5e55a5}\index{Notification@{Notification}!Notification@{Notification}}
+\index{Notification@{Notification}!Notification@{Notification}}
+\doxysubsubsection{\texorpdfstring{Notification()}{Notification()}}
+{\footnotesize\ttfamily \label{class_notification_a4537261ea035c690addda9dd5a5e55a5} 
+Notification.\+Notification (\begin{DoxyParamCaption}\item[{Date}]{timestamp}{, }\item[{String}]{message}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+通知のコンストラクタ。 
+
+
+\begin{DoxyParams}{引数}
+{\em timestamp} & 通知のタイムスタンプ \\
+\hline
+{\em message} & 通知のメッセージ \\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{main_8java_source}{main.\+java}} の \mbox{\hyperlink{main_8java_source_l00070}{70}} 行目に定義があります。
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ this.timestamp\ =\ \mbox{\hyperlink{class_notification_aa883f881ceb10abeb1c977d4caecdaac}{timestamp}};}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ this.message\ =\ \mbox{\hyperlink{class_notification_a91cd117772af07f9779e4c6a7d5796a2}{message}};}
+\DoxyCodeLine{00073\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+参照先 \mbox{\hyperlink{main_8java_source_l00062}{message}}, \mbox{\hyperlink{main_8java_source_l00061}{timestamp}}.
+
+
+
+\doxysubsection{関数詳解}
+\Hypertarget{class_notification_a4b603fb02f598ad492a689c516ad2609}\index{Notification@{Notification}!getMessage@{getMessage}}
+\index{getMessage@{getMessage}!Notification@{Notification}}
+\doxysubsubsection{\texorpdfstring{getMessage()}{getMessage()}}
+{\footnotesize\ttfamily \label{class_notification_a4b603fb02f598ad492a689c516ad2609} 
+String Notification.\+get\+Message (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+通知のメッセージを取得する。 
+
+\begin{DoxyReturn}{戻り値}
+メッセージ 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{main_8java_source}{main.\+java}} の \mbox{\hyperlink{main_8java_source_l00089}{89}} 行目に定義があります。
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_notification_a91cd117772af07f9779e4c6a7d5796a2}{message}};}
+\DoxyCodeLine{00091\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+参照先 \mbox{\hyperlink{main_8java_source_l00062}{message}}.
+
+\Hypertarget{class_notification_a5c93b42b1b246208197240631b161f53}\index{Notification@{Notification}!getTimestamp@{getTimestamp}}
+\index{getTimestamp@{getTimestamp}!Notification@{Notification}}
+\doxysubsubsection{\texorpdfstring{getTimestamp()}{getTimestamp()}}
+{\footnotesize\ttfamily \label{class_notification_a5c93b42b1b246208197240631b161f53} 
+Date Notification.\+get\+Timestamp (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+通知のタイムスタンプを取得する。 
+
+\begin{DoxyReturn}{戻り値}
+タイムスタンプ 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{main_8java_source}{main.\+java}} の \mbox{\hyperlink{main_8java_source_l00080}{80}} 行目に定義があります。
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_notification_aa883f881ceb10abeb1c977d4caecdaac}{timestamp}};}
+\DoxyCodeLine{00082\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+参照先 \mbox{\hyperlink{main_8java_source_l00061}{timestamp}}.
+
+
+
+\doxysubsection{メンバ詳解}
+\Hypertarget{class_notification_a91cd117772af07f9779e4c6a7d5796a2}\index{Notification@{Notification}!message@{message}}
+\index{message@{message}!Notification@{Notification}}
+\doxysubsubsection{\texorpdfstring{message}{message}}
+{\footnotesize\ttfamily \label{class_notification_a91cd117772af07f9779e4c6a7d5796a2} 
+String Notification.\+message\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+ \mbox{\hyperlink{main_8java_source}{main.\+java}} の \mbox{\hyperlink{main_8java_source_l00062}{62}} 行目に定義があります。
+
+
+
+参照元 \mbox{\hyperlink{main_8java_source_l00089}{get\+Message()}}, \mbox{\hyperlink{main_8java_source_l00070}{Notification()}}.
+
+\Hypertarget{class_notification_aa883f881ceb10abeb1c977d4caecdaac}\index{Notification@{Notification}!timestamp@{timestamp}}
+\index{timestamp@{timestamp}!Notification@{Notification}}
+\doxysubsubsection{\texorpdfstring{timestamp}{timestamp}}
+{\footnotesize\ttfamily \label{class_notification_aa883f881ceb10abeb1c977d4caecdaac} 
+Date Notification.\+timestamp\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+ \mbox{\hyperlink{main_8java_source}{main.\+java}} の \mbox{\hyperlink{main_8java_source_l00061}{61}} 行目に定義があります。
+
+
+
+参照元 \mbox{\hyperlink{main_8java_source_l00080}{get\+Timestamp()}}, \mbox{\hyperlink{main_8java_source_l00070}{Notification()}}.
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Kmax/\mbox{\hyperlink{main_8java}{main.\+java}}\end{DoxyCompactItemize}

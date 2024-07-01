@@ -1,0 +1,246 @@
+\doxysection{Sensor クラス}
+\hypertarget{class_sensor}{}\label{class_sensor}\index{Sensor@{Sensor}}
+
+
+センサーを表すクラス。このクラスは各センサーの識別\+ID、設置場所、優先中かどうかの状態を持ち、 状態が変更された際に通知を送る機能を持つ。  
+
+
+
+
+Sensor 連携図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=213pt]{class_sensor__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sensor_a3c47452b4bc8e66f242b2388f3852d4a}{Sensor}} (int \mbox{\hyperlink{class_sensor_abf3b9a9233db2abd0a79937b3863d317}{id}}, String \mbox{\hyperlink{class_sensor_a9fc20bdf2c72759b47962794aad2ec09}{location}}, \mbox{\hyperlink{class_notification_list}{Notification\+List}} \mbox{\hyperlink{class_sensor_af62610c1415f18639599a9ced59ad4e4}{notification\+List}})
+\begin{DoxyCompactList}\small\item\em センサーのコンストラクタ。 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sensor_a182b59d4fd30533954906773629e332a}{set\+Occupied}} (boolean \mbox{\hyperlink{class_sensor_a11af10fa5bc0a803cbbf1a2f50a253ec}{is\+Occupied}})
+\begin{DoxyCompactList}\small\item\em センサーの状態を設定する。 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{非公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_sensor_a8b925da554696691149b744b8e96de44}{notify\+Status}} ()
+\begin{DoxyCompactList}\small\item\em 状態を通知するための内部メソッド。 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{非公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_sensor_abf3b9a9233db2abd0a79937b3863d317}{id}}
+\item 
+String \mbox{\hyperlink{class_sensor_a9fc20bdf2c72759b47962794aad2ec09}{location}}
+\item 
+boolean \mbox{\hyperlink{class_sensor_a11af10fa5bc0a803cbbf1a2f50a253ec}{is\+Occupied}}
+\item 
+\mbox{\hyperlink{class_notification_list}{Notification\+List}} \mbox{\hyperlink{class_sensor_af62610c1415f18639599a9ced59ad4e4}{notification\+List}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+センサーを表すクラス。このクラスは各センサーの識別\+ID、設置場所、優先中かどうかの状態を持ち、 状態が変更された際に通知を送る機能を持つ。 
+
+ \mbox{\hyperlink{main_8java_source}{main.\+java}} の \mbox{\hyperlink{main_8java_source_l00016}{16}} 行目に定義があります。
+
+
+
+\doxysubsection{構築子と解体子}
+\Hypertarget{class_sensor_a3c47452b4bc8e66f242b2388f3852d4a}\index{Sensor@{Sensor}!Sensor@{Sensor}}
+\index{Sensor@{Sensor}!Sensor@{Sensor}}
+\doxysubsubsection{\texorpdfstring{Sensor()}{Sensor()}}
+{\footnotesize\ttfamily \label{class_sensor_a3c47452b4bc8e66f242b2388f3852d4a} 
+Sensor.\+Sensor (\begin{DoxyParamCaption}\item[{int}]{id}{, }\item[{String}]{location}{, }\item[{\mbox{\hyperlink{class_notification_list}{Notification\+List}}}]{notification\+List}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+センサーのコンストラクタ。 
+
+
+\begin{DoxyParams}{引数}
+{\em id} & センサーの識別\+ID \\
+\hline
+{\em location} & センサーの設置場所 \\
+\hline
+{\em notification\+List} & 通知リスト \\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{main_8java_source}{main.\+java}} の \mbox{\hyperlink{main_8java_source_l00029}{29}} 行目に定義があります。
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ this.id\ =\ \mbox{\hyperlink{class_sensor_abf3b9a9233db2abd0a79937b3863d317}{id}};\ \textcolor{comment}{//\ センサー\ ID}}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ this.location\ =\ \mbox{\hyperlink{class_sensor_a9fc20bdf2c72759b47962794aad2ec09}{location}};\ \textcolor{comment}{//\ センサーの場所。}}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ this.notificationList\ =\ \mbox{\hyperlink{class_sensor_af62610c1415f18639599a9ced59ad4e4}{notificationList}};}
+\DoxyCodeLine{00033\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+参照先 \mbox{\hyperlink{main_8java_source_l00017}{id}}, \mbox{\hyperlink{main_8java_source_l00018}{location}}, \mbox{\hyperlink{main_8java_source_l00020}{notification\+List}}.
+
+
+
+\doxysubsection{関数詳解}
+\Hypertarget{class_sensor_a8b925da554696691149b744b8e96de44}\index{Sensor@{Sensor}!notifyStatus@{notifyStatus}}
+\index{notifyStatus@{notifyStatus}!Sensor@{Sensor}}
+\doxysubsubsection{\texorpdfstring{notifyStatus()}{notifyStatus()}}
+{\footnotesize\ttfamily \label{class_sensor_a8b925da554696691149b744b8e96de44} 
+void Sensor.\+notify\+Status (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+状態を通知するための内部メソッド。 
+
+
+
+ \mbox{\hyperlink{main_8java_source}{main.\+java}} の \mbox{\hyperlink{main_8java_source_l00048}{48}} 行目に定義があります。
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ String\ message\ =\ \mbox{\hyperlink{class_sensor_a11af10fa5bc0a803cbbf1a2f50a253ec}{isOccupied}}\ ?\ \textcolor{stringliteral}{"{}Occupied"{}}\ :\ \textcolor{stringliteral}{"{}Vacant"{}};}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_notification}{Notification}}\ notification\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_notification}{Notification}}(\textcolor{keyword}{new}\ Date(),\ message);}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_sensor_af62610c1415f18639599a9ced59ad4e4}{notificationList}}.\mbox{\hyperlink{class_notification_list_ae0f5f9b1d693afbf66b282d18c087c12}{addNotification}}(notification);}
+\DoxyCodeLine{00052\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+参照先 \mbox{\hyperlink{main_8java_source_l00115}{Notification\+List.\+add\+Notification()}}, \mbox{\hyperlink{main_8java_source_l00019}{is\+Occupied}}, \mbox{\hyperlink{main_8java_source_l00020}{notification\+List}}.
+
+
+
+参照元 \mbox{\hyperlink{main_8java_source_l00040}{set\+Occupied()}}.
+
+呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_sensor_a8b925da554696691149b744b8e96de44_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_sensor_a8b925da554696691149b744b8e96de44_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_sensor_a182b59d4fd30533954906773629e332a}\index{Sensor@{Sensor}!setOccupied@{setOccupied}}
+\index{setOccupied@{setOccupied}!Sensor@{Sensor}}
+\doxysubsubsection{\texorpdfstring{setOccupied()}{setOccupied()}}
+{\footnotesize\ttfamily \label{class_sensor_a182b59d4fd30533954906773629e332a} 
+void Sensor.\+set\+Occupied (\begin{DoxyParamCaption}\item[{boolean}]{is\+Occupied}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+センサーの状態を設定する。 
+
+
+\begin{DoxyParams}{引数}
+{\em is\+Occupied} & センサーが優先中かどうか \\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{main_8java_source}{main.\+java}} の \mbox{\hyperlink{main_8java_source_l00040}{40}} 行目に定義があります。
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ this.isOccupied\ =\ \mbox{\hyperlink{class_sensor_a11af10fa5bc0a803cbbf1a2f50a253ec}{isOccupied}};}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_sensor_a8b925da554696691149b744b8e96de44}{notifyStatus}}();}
+\DoxyCodeLine{00043\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+参照先 \mbox{\hyperlink{main_8java_source_l00019}{is\+Occupied}}, \mbox{\hyperlink{main_8java_source_l00048}{notify\+Status()}}.
+
+
+
+参照元 \mbox{\hyperlink{main_8java_source_l00142}{Main.\+main()}}.
+
+呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_sensor_a182b59d4fd30533954906773629e332a_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=282pt]{class_sensor_a182b59d4fd30533954906773629e332a_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{メンバ詳解}
+\Hypertarget{class_sensor_abf3b9a9233db2abd0a79937b3863d317}\index{Sensor@{Sensor}!id@{id}}
+\index{id@{id}!Sensor@{Sensor}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily \label{class_sensor_abf3b9a9233db2abd0a79937b3863d317} 
+int Sensor.\+id\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+ \mbox{\hyperlink{main_8java_source}{main.\+java}} の \mbox{\hyperlink{main_8java_source_l00017}{17}} 行目に定義があります。
+
+
+
+参照元 \mbox{\hyperlink{main_8java_source_l00029}{Sensor()}}.
+
+\Hypertarget{class_sensor_a11af10fa5bc0a803cbbf1a2f50a253ec}\index{Sensor@{Sensor}!isOccupied@{isOccupied}}
+\index{isOccupied@{isOccupied}!Sensor@{Sensor}}
+\doxysubsubsection{\texorpdfstring{isOccupied}{isOccupied}}
+{\footnotesize\ttfamily \label{class_sensor_a11af10fa5bc0a803cbbf1a2f50a253ec} 
+boolean Sensor.\+is\+Occupied\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+ \mbox{\hyperlink{main_8java_source}{main.\+java}} の \mbox{\hyperlink{main_8java_source_l00019}{19}} 行目に定義があります。
+
+
+
+参照元 \mbox{\hyperlink{main_8java_source_l00048}{notify\+Status()}}, \mbox{\hyperlink{main_8java_source_l00040}{set\+Occupied()}}.
+
+\Hypertarget{class_sensor_a9fc20bdf2c72759b47962794aad2ec09}\index{Sensor@{Sensor}!location@{location}}
+\index{location@{location}!Sensor@{Sensor}}
+\doxysubsubsection{\texorpdfstring{location}{location}}
+{\footnotesize\ttfamily \label{class_sensor_a9fc20bdf2c72759b47962794aad2ec09} 
+String Sensor.\+location\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+ \mbox{\hyperlink{main_8java_source}{main.\+java}} の \mbox{\hyperlink{main_8java_source_l00018}{18}} 行目に定義があります。
+
+
+
+参照元 \mbox{\hyperlink{main_8java_source_l00029}{Sensor()}}.
+
+\Hypertarget{class_sensor_af62610c1415f18639599a9ced59ad4e4}\index{Sensor@{Sensor}!notificationList@{notificationList}}
+\index{notificationList@{notificationList}!Sensor@{Sensor}}
+\doxysubsubsection{\texorpdfstring{notificationList}{notificationList}}
+{\footnotesize\ttfamily \label{class_sensor_af62610c1415f18639599a9ced59ad4e4} 
+\mbox{\hyperlink{class_notification_list}{Notification\+List}} Sensor.\+notification\+List\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+ \mbox{\hyperlink{main_8java_source}{main.\+java}} の \mbox{\hyperlink{main_8java_source_l00020}{20}} 行目に定義があります。
+
+
+
+参照元 \mbox{\hyperlink{main_8java_source_l00048}{notify\+Status()}}, \mbox{\hyperlink{main_8java_source_l00029}{Sensor()}}.
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Kmax/\mbox{\hyperlink{main_8java}{main.\+java}}\end{DoxyCompactItemize}
