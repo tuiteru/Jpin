@@ -1,0 +1,49 @@
+# LaTeXの中間ファイル
+*.aux
+*.bbl
+*.blg
+*.brf
+*.idx
+*.ilg
+*.ind
+*.lof
+*.log
+*.lot
+*.out
+*.toc
+*.acn
+*.acr
+*.alg
+*.glg
+*.glo
+*.gls
+*.fls
+*.fdb_latexmk
+
+# コンパイルされたファイル
+*.dvi
+*.pdf
+*.ps
+
+# SyncTeXファイル
+*.synctex.gz
+*.synctex(busy)
+
+# 短期間の補助ファイル
+*.nav
+*.snm
+*.vrb
+
+# Emacsのバッファファイル
+*~
+
+# TeXShop用
+*.pdfsync
+
+# その他の一時ファイル
+*.tmp
+*.bak
+
+# 設定ファイルや一時的な作業ファイル
+*.swp
+*.DS_Store
